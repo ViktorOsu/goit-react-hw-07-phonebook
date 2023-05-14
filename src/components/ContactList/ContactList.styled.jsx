@@ -20,6 +20,6 @@ export const ContactName = styled.p`
 
 export const DeleteBtn = styled.button`
   height: 24px;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
 `;
