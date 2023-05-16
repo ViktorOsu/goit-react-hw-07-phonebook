@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 import { PhonebookForm, SubmitBtn, FormTitle, FormItem } from './Form.styled';
 import { addContact } from 'redux/operations';
 import { useDispatch } from 'react-redux';
@@ -16,9 +16,9 @@ export const Form = ({ checkDuplicate }) => {
     e.preventDefault();
 
     const contact = {
-      id: nanoid(),
+      // id: nanoid(),
       name: name,
-      number: number,
+      phone: number,
     };
 
     checkDuplicate(contact)

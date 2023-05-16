@@ -5,10 +5,11 @@ import { ContactList } from './ContactList/ContactList';
 import { PhoneBook, ContactsTitle, ContactsWper } from './App.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchContacts } from '../redux/operations';
+import { selectContacts, selectFilter } from '../redux/selectors';
 
 export const App = () => {
-  const contacts = useSelector(state => state.contacts.contacts.items);
-  const filter = useSelector(state => state.contacts.filter);
+  const contacts = useSelector(selectContacts);
+  const filter = useSelector(selectFilter);
   const dispatch = useDispatch();
 
   useEffect(() => {
